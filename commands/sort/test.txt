@@ -1,0 +1,6 @@
+apple:4
+zigzbg:1
+zigzag:1
+peanut:10
+cucumber:3
+bay:2
