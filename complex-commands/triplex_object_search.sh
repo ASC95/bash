@@ -10,6 +10,9 @@ first_approach() {
 }
 first_approach
 
+# All of these feeders have of course been anonymized. Therefore, I'm not going to be able to use real lat/lons of triplex load/node objects to
+# replace them
+
 # ./omf/static/publicFeeders/OMF_Norfork1_Calibrated.omd:1
 # ./omf/static/publicFeeders/Simple Market System AnonTest.omd:1
 # ./omf/static/publicFeeders/Simple Market System BROKEN.omd:1
