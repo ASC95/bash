@@ -8,7 +8,7 @@
 # - https://stackoverflow.com/questions/14049057/bash-expand-variable-in-a-variable - indirect expansion of variables
 # - https://unix.stackexchange.com/questions/68042/double-and-triple-substitution-in-bash-and-zsh - double indirection? It's hard
 
-# - https://stackoverflow.com/questions/10067266/when-to-wrap-quotes-around-a-shell-variable - when to quote
+# - https://stackoverflow.com/questions/10067266/when-to-wrap-quotes-around-a-shell-variable - when to quote variables
 
 cd $( dirname ${BASH_SOURCE[0]})
 

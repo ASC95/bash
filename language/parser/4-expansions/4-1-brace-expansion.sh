@@ -2,7 +2,7 @@
 
 # https://itnext.io/upgrading-bash-on-macos-7138bd1066ba
 # https://tiswww.case.edu/php/chet/bash/bashref.html#Brace-Expansion
-# https://wiki.bash-hackers.org/syntax/expansion/brace
+# https://wiki.bash-hackers.org/syntax/expansion/brace - <PREAMBLE>{<start>..<end>}<POSTSCRIPT>
 
 # Remember that I need to use the updated version of Bash installed via Homebrew
 # Brace expansion is very powerful. It generates all permutations of whatever is inside of the brace, combined with the (optional) preamble and

@@ -7,12 +7,12 @@
 # inherits three open file descriptors from its parent: 0 (stdin) which is opening for reading, and 1 (stdout) and 2 (stderr), which are open for
 # writing. Shells use redirection to work with file descriptors.
 
-cd "$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+cd "$( dirname "${BASH_SOURCE[0]}" )"
 
-# Whenever a command like "cat" or "read" is entered without any arguments, the command implicitly reads from stdin. Once cat gets some data from its
-# file descriptor, it will do what it's supposed to: output to stdout. Pressing control + d sends the end-of-file (EOF) character to the terminal. This
-# will cause cat to think that the file (which happens to be stdin) has closed. cat will stop reading and terminate, and Bash will see this and resume
-# the prompt
+# If a command (like 'read' or 'cat') reads from a file, then it reads from a file descriptor (which could be stdin). Thus, when such a command is
+# entered without any arguments, the command implicitly reads from stdin. Once cat gets some data from its file descriptor, it will do what it's
+# supposed to: output to stdout. Pressing control + d sends the end-of-file (EOF) character to the terminal. This will cause cat to think that the
+# file (which happens to be stdin) has closed. cat will stop reading and terminate, and Bash will see this and resume the prompt
 cat_from_stdin() {
     cat
 }
@@ -33,7 +33,7 @@ cat_from_stdin_again() {
 modify_redirection_operators() {
     printf '%s\n' 'Wrote stuff' 1> writefile.txt # Change FD 1 (stdout) of printf to be the file instead of the keyboard
     printf '%s\n' 'Wrote stuff' >> writefile.txt # Stdout is the default for the ">" and ">>" operators, so this command is identical to the above in terms of the FD
-    #printf < readfile.txt # printf apparently does not read from stdin at all, so this won't work
+    #printf < readfile.txt # printf apparently does not read from a file descriptor at all, so this won't work
     cat 0< readfile.txt # Change FD 0 (stdin) of cat to be the file instead of the keyboard
     cat < readfile.txt # Stdin is the default for the "<" and "<<" operators, so this command is identical to the above
 }

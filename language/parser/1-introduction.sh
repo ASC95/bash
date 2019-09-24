@@ -25,13 +25,15 @@
 # - 1b) Parse special operators. Bash will inspect the command to see if it contains any special operators, and will process them in a specific order.
 #   Almost all operators are evaluated and then replaced with the result of the evaluation, except for redirection operators (which are removed from
 #   the command-line).
+
 #   - What are the operators?
+
 # - 2b) Perform expansions of various types. The order of expansions is:
-#  - 1) Brace expansion {..}
-#  - 2) Tilde expansion ~<something>
+#  - 1) Brace expansion: {..}
+#  - 2) Tilde expansion: ~<something>
 #    - Just ~ is replaced by $HOME
-#  - 3) Parameter and variable expansion
-#  - 4) Arithmetic expansion,
+#  - 3) Variable expansion: ${}
+#  - 4) Arithmetic expansion
 #  - 5) Command substitution (done in a left-to-right fashion);
 #  - 6) Word splitting
 #  - 7) Filename expansion

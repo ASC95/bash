@@ -21,12 +21,15 @@ discover_corrupt_files() {
     valid_shasum2=($(shasum 'template_number.txt'))
     echo ${valid_shasum1[0]}
     echo ${valid_shasum2[0]}
+    # shasum stdout prints the filename and status. shadum stderr prints WARNING message
     for f in *; do # Never parse the output of ls
-        result1=$(shasum -c <(printf '%s' "${valid_shasum1[0]}  $f"))
-        result2=$(printf '%s' "${valid_shasum2[0]}  $f" | shasum -c) # might need -
-        if # result of grep is nothing
-
-        printf '%s\n' $result
+        result1=$( shasum -c 2>/dev/null <( printf '%s' "${valid_shasum1[0]}  $f" ) | grep -i 'failed' )
+        #printf '%s\n' "$result1"
+        result2=$( printf '%s' "${valid_shasum2[0]}  $f" | shasum -c 2>/dev/null | grep -i 'failed' )
+        #printf '%s\n' "$result2"
+        if [[ -n "$result1" && -n "$result2" ]]; then
+            printf '%s\n' "$f is corrupt"
+        fi
     done
 }
 

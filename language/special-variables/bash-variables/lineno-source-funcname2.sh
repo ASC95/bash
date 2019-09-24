@@ -28,7 +28,7 @@
 # BASH_SOURCE[4]:
 # BASH_SOURCE[5]:
 
-# If this file is executed from introduction.sh, the output is:
+# If this file is executed from lineno-source-funcname1.sh, the output is:
 # BASH_LINENO[0]: 92
 # BASH_LINENO[1]: 0
 # BASH_LINENO[2]:
@@ -48,7 +48,7 @@
 # BASH_SOURCE[4]:
 # BASH_SOURCE[5]:
 
-# If this file is sourced from introduction.sh, the output is:
+# If this file is sourced from lineno-source-funcname1.sh, the output is:
 # BASH_LINENO[0]: 92
 # BASH_LINENO[1]: 29
 # BASH_LINENO[2]: 33
@@ -63,9 +63,9 @@
 # FUNCNAME[5]:
 # BASH_SOURCE[0]: bashlineno-bashsource-funcname.sh
 # BASH_SOURCE[1]: bashlineno-bashsource-funcname.sh
-# BASH_SOURCE[2]: /Users/austinchang/tutorials/bash/variables/bash-variables/introduction.sh
-# BASH_SOURCE[3]: /Users/austinchang/tutorials/bash/variables/bash-variables/introduction.sh
-# BASH_SOURCE[4]: /Users/austinchang/tutorials/bash/variables/bash-variables/introduction.sh
+# BASH_SOURCE[2]: /Users/austinchang/tutorials/bash/variables/bash-variables/lineno-source-funcname1.sh
+# BASH_SOURCE[3]: /Users/austinchang/tutorials/bash/variables/bash-variables/lineno-source-funcname1.sh
+# BASH_SOURCE[4]: /Users/austinchang/tutorials/bash/variables/bash-variables/lineno-source-funcname1.sh
 # BASH_SOURCE[5]:
 
 view_call_stack() {

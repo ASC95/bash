@@ -5,6 +5,9 @@
 # https://serverfault.com/questions/208265/what-is-bash-event-not-found
 # https://unix.stackexchange.com/questions/33339/cant-use-exclamation-mark-in-bash - why echo "$!" doesn't work in the shell (mug896)
 
+# These notes don't belong in the special-variables folder because they concern the command history in general, not just '$!' (a special shell
+# variable)
+
 # In the interactive shell, the "!" character will display previous user commands. The specific commmands that will be displayed depend on the
 # variation of the "!" command that was used. ALL "!<something>"" history commands are disabled in shell scripts and (possibly) enabled in the
 # interactive shell.

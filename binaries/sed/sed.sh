@@ -1,4 +1,4 @@
-# https://askubuntu.com/questions/20414/find-and-replace-text-within-a-file-using-commands
+# https://askubuntu.com/questions/20414/find-and-replace-text-within-a-file-using-commands - sed in-place substitution
 # https://www.mkyong.com/mac/sed-command-hits-undefined-label-error-on-mac-os-x/ - sed on macOS
 # https://stackoverflow.com/questions/4247068/sed-command-with-i-option-failing-on-mac-but-works-on-linux - sed on macOS
 # https://www.cyberciti.biz/faq/unix-linux-sed-print-only-matching-lines-command/ - print matching lines with sed
@@ -7,6 +7,8 @@
 
 # sed is NOT meant to replace grep! Don't use sed to do grep's job. sed's entire functionality is built on editing its input according to some rules
 # and spitting out output. grep does not edit output. It only outputs lines that match some pattern.
+
+# These are bad notes below here...
 
 
 # Basic syntax (see man page)
