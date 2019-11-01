@@ -1,6 +1,7 @@
 # https://mywiki.wooledge.org/BashGuide/TestsAndConditionals
 
 cd $( dirname ${BASH_SOURCE[0]} )
+
 # The if-statement executes some commands and branches to 'then' if the exit code of the commands was 0, otherwise it branches to 'else'
 # - There must always be a 'then' statement with some commands to run. There cannot just be an 'else' statement
 examine_if_flow() {

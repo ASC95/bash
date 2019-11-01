@@ -7,8 +7,29 @@
 # Bash only performs integer arithmetic, not floating point arithmetic. If I need floating point arithmetic, I need to use an external program (e.g.
 # awk)
 
-# I NEED TO KNOW THE DIFFERENCE BETWEEN $((..)) and ((..)) !!
+# $((..)) performs an arithemtic expansion. What does that mean? It means that 1) the inside of the expansion is a math context and 2) the result of
+# the expansion can be assigned to a variable or used elsewhere
+arithmetic_expansion() {
+    j=5
+    sum=$((j + 3))
+    printf '%s\n' $sum # 8
+    # This is a syntax error because ((..)) is NOT an arithmetic expansion. It is an arithmetic command. It returns a return status code, but that
+    # status code cannot be assigned to a variable
+    #sum=((j + 10))
+    # This is not a syntax error. The command executes. That's all.
+    ((sum = sum + 10))
+    printf '%s\n' $sum # 18
+}
 
+# ((..)) performs an arithmetic command. The return code of the command can be used for different purposes, such as with an if-statement
+arithmetic_command() {
+    if ((4 < 5))
+    then
+        echo '4 is less than 5'
+    else
+        echo '4 is greater than 5'
+    fi
+}
 
 # Within a math context, variables do NOT need the '$' character to be accessed. In fact, any string that isn't quoted is explicitly evaluated as a
 # variable
@@ -30,11 +51,10 @@ variables_inside_arithmetic_context() {
 evaluate_non_arithmetic_expression() {
     #result=$(( 0 )); echo "$?" # 0
     #(( 0 )); echo "$?" # 1
-    ## $resutl is simply the evaluation of the math context, which was 0
+    ## $result is simply the evaluation of the math context, which was 0
     #echo $result # 0
     $(( 'yay' ))
 }
-
 
 # In Bash, an exit code of 0 indicates successful command execution. That's why the 'true' built-in always returns with an exit code of 0. Anything
 # other than a 0 exit code indicates there was a problem. Arithmetic contexts created with 'let' or '((..))' follow an opposite convention according
@@ -52,6 +72,8 @@ examine_exit_code() {
     (( false )); echo "$?" # 1
 }
 
+#arithmetic_expansion
+arithmetic_command
 #variables_inside_arithmetic_context
-evaluate_non_arithmetic_expression
+#evaluate_non_arithmetic_expression
 #examine_exit_code

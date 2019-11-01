@@ -1,1 +1,0 @@
-# Use "unset" to unset a variable in Bash. Unsetting a nonexistent variable does not raise any kind of error

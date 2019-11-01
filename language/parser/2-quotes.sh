@@ -4,7 +4,7 @@
 # written as $'<string>' is subject to ANSI-C quoting. Any \<character> will be replaced by the specified ANSI C standard.
 
 # Normally, it is not possible to include a single quote charcter within single quotes
-function include_single_quote() {
+include_single_quote() {
     printf '%s\n' $'Here is a single quote \' ' # Here is a single quote '
     # These do not work
     #printf '%s\n' ${'Here is a single quote \' '} 
@@ -13,4 +13,20 @@ function include_single_quote() {
     printf '%s\n' "Here is a single quote ' " # Here is a single quote '
 }
 
-include_single_quote
+# Single quotes perform absolutely NO interpolation on the characters between them. Single quotes (even with backslashes) are not allowed between
+# single quotes
+no_interpolation() {
+    echo 'The name of this script is $0' # The name of this script is $0
+    sleep 10 &
+    echo 'PID of last background process was $!' # PID of last background process was $!
+}
+
+interpolation() {
+    echo "The name of this script is $0" # The name of this script is -bash
+    sleep 10 &
+    echo "PID of last background process was $!" # PID of last background process was 4106
+}
+
+#include_single_quote
+#no_interpolation
+interpolation

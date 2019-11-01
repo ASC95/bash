@@ -12,7 +12,7 @@
 
 cd $( dirname ${BASH_SOURCE[0]})
 
-# One situation where braces are required to expand a variable is to expand a variable within a string
+# One situation when braces are required to expand a variable is to expand a variable within a string
 braces_separate_variable_names() {
     type='Processing'
     printf '%s\n' "A $typeError was raised during execution" # Not a set variable name
@@ -66,6 +66,7 @@ braces_strip_globbed_values() {
 # Without quotes, $my_var is 5 separate arguments to printf. With quotes, "$my_var" is a 1 single argument to printf
 # - Braces do not preserve a string with spaces as a single value. Only quotes do
 # - In short, quote everything that that I don't want token splitting and wildcard expansion to apply to. That's it
+# - Word-splitting actually is governed by the special $IFS shell variable, which by default is <space><tab><newline>. This can be changed
 double_quotes_preserve_strings_with_spaces() {
     my_var="This is a nice sentence."
     #printf '%s\n' $my_var
@@ -79,3 +80,10 @@ double_quotes_preserve_strings_with_spaces() {
 #braces_allow_indirect_expansion '1a' '2a' '3a' '4a' '5a' '6a' '7a' '8a' '9a' '10a' '11a'
 #braces_strip_globbed_values
 double_quotes_preserve_strings_with_spaces
+
+
+# more stuff....
+
+# https://stackoverflow.com/questions/3601515/how-to-check-if-a-variable-is-set-in-bash
+# https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02 - dealing with unset and null chart
+# https://serverfault.com/questions/7503/how-to-determine-if-a-bash-variable-is-empty - checking for unset AND empty string

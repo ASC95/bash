@@ -1,0 +1,2 @@
+- https://tiswww.case.edu/php/chet/bash/bashref.html#Shell-Expansions
+- The order of expansions is: brace expansion; tilde expansion, parameter and variable expansion, arithmetic expansion, and command substitution (done in a left-to-right fashion); word splitting; and filename expansion. 

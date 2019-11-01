@@ -1,7 +1,9 @@
-#!/bin/bash
+#!usr/bin/env bash
 
 # http://mywiki.wooledge.org/BashGuide/InputAndOutput
 # https://stackoverflow.com/questions/2188199/how-to-use-double-or-single-brackets-parentheses-curly-braces - {...}
+# https://www.gnu.org/software/bash/manual/html_node/Command-Grouping.html
+# https://stackoverflow.com/questions/30727590/grouping-commands-in-curly-braces-and-piping-does-not-preserve-variable - finally! Helpful!
 
 # A FIFO (file) is also referred to as a "named pipe". It accomplishes the same job as the pipe operator, but with a filename.
 
@@ -26,13 +28,16 @@ bad_echo_to_grep() {
     bean' | grep bea test.txt
 }
 
-# Every command that is piped into is executed in its own subshell environment. That means changes made to the current environment that occur within
-# the subshell environment are NOT persisted
+# Every command that is piped into is executed in its own subshell environment. That means that any changes caused by the subshell will not affect the
+# current shell
+# - Using {...;} (i.e. command grouping) cannot fix this because the pipe creates the subshell regardless (see link). In fact, command grouping with a
+#   pipe will cause ALL grouped commands to run in the subshell
 pipe_creates_subshell() {
     my_var='12345'
-    # Braces {...} execute a sequence of commands in the current shell context. Therefore, the modification to my_var is still relevant to the printf call
+    # Braces {...} execute a sequence of commands in the current shell context, but the subshell created by a pipe will ignore this. The
+    # modification to my_var only exists in the subshell
     echo 'Some cool output' | { read my_var && printf '%s\n' "${my_var}";} # Some cool output
-    # There are no braces, so $ read my_var $ occurs in its own subshell, and afterwards the printf call is in the top-most shell environment
+    # There are no braces, so $ read my_var $ occurs in the subshell but $ printf ... $ occurs in the current shell
     echo 'Some cool output' | read my_var && printf '%s\n' "${my_var}" # 12345
     # Any changes made by the subshell were clearly not persisted
     printf '%s\n' "${my_var}" # 12345

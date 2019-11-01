@@ -43,8 +43,6 @@ function lots_of_permutations() {
     printf '%s ' {a..z}{0..9}{A..Z}
 }
 
-
-
 list_numbers
 #c_words
 #sequences

@@ -11,6 +11,7 @@ first_ten_lines() {
 }
 
 scroll_output() {
+    # Set the scrolling window size to 10 lines. The default is 1 screenful
     history | less --window=10
 }
 
