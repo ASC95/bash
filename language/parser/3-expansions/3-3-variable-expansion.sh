@@ -74,12 +74,12 @@ double_quotes_preserve_strings_with_spaces() {
     printf '%s\n' "$my_var"
 }
 
-#braces_separate_variable_names
+braces_separate_variable_names
 #braces_expand_array_elements
 #braces_expand_double_digit_positional_arguments '1a' '2a' '3a' '4a' '5a' '6a' '7a' '8a' '9a' '10a' '11a'
 #braces_allow_indirect_expansion '1a' '2a' '3a' '4a' '5a' '6a' '7a' '8a' '9a' '10a' '11a'
 #braces_strip_globbed_values
-double_quotes_preserve_strings_with_spaces
+#double_quotes_preserve_strings_with_spaces
 
 
 # more stuff....

@@ -1,8 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # https://unix.stackexchange.com/questions/52762/trying-to-sort-on-two-fields-second-then-first
 
-cd $(dirname ${BASH_SOURCE[0]})
+#echo "$( dirname "${BASH_SOURCE[0]}" ) "
+#cd "$( dirname "${BASH_SOURCE[0]}" ) "
+cd "$( dirname "${BASH_SOURCE[0]}" )"
 
 # If no keys are provided, the entire line (delineated by a newline) is used as the key to sort
 sort_by_entire_line() {
@@ -16,5 +18,12 @@ sort_by_numeric_key() {
     sort -t ":" -k 2,2 -n test.txt
 }
 
+# Use the -u option to suppress all keys that are identical to a key that has already been found
+# - Order matters
+sort_unique() {
+    sort -t ':' -k 2 -n test.txt
+}
+
 #sort_by_entire_line
-sort_by_key
+#sort_by_numeric_key
+sort_unique

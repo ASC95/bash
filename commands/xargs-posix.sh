@@ -4,7 +4,8 @@
 
 cd $(dirname "${BASH_SOURCE[0]}")
 
-# xargs transforms stdin into program arguments (i.e. strings)
+# - xargs transforms stdin into program arguments (i.e. strings)
+# - It is only possible to specify a custom delimiter with GNU xargs unfortunately
 
 # By default, xargs uses spaces, tab, newlines, and EOF as delimiters.
 # - In the terminal, $ ls $ will output entires separated by tab characters. xargs can work with a single string of tab-delimited values just fine. If

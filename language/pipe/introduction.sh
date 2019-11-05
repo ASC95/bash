@@ -34,8 +34,8 @@ bad_echo_to_grep() {
 #   pipe will cause ALL grouped commands to run in the subshell
 pipe_creates_subshell() {
     my_var='12345'
-    # Braces {...} execute a sequence of commands in the current shell context, but the subshell created by a pipe will ignore this. The
-    # modification to my_var only exists in the subshell
+    # Brace grouping (i.e. {...;}) execute a sequence of commands in the current shell context, but the subshell created by a pipe will ignore this.
+    # - The modification to my_var only exists in the subshell
     echo 'Some cool output' | { read my_var && printf '%s\n' "${my_var}";} # Some cool output
     # There are no braces, so $ read my_var $ occurs in the subshell but $ printf ... $ occurs in the current shell
     echo 'Some cool output' | read my_var && printf '%s\n' "${my_var}" # 12345

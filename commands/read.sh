@@ -1,32 +1,32 @@
 #!/usr/bin/env bash
 
-cd $(dirname "${BASH_SOURCE[0]}")
+# http://linuxcommand.org/lc3_man_pages/readh.html
+# https://stackoverflow.com/questions/4642191/read-line-by-line-in-bash-script
+# https://stackoverflow.com/questions/4165135/how-to-use-while-read-bash-to-read-the-last-line-in-a-file-if-there-s-no-new
+
+
+cd "$(dirname "${BASH_SOURCE[0]}")"
 
 # - $ read $ does not write to stdout by itself
 
-# Remember that pipes are ticky because by default the command that is being piped into executes in a child process. If a function is used as the
-# command that is being piped into, then the entire function executes in the subprocess. Also note that a child process inherits the stdin and stdout
-# of its parent by default!
-# - my_var is a global variable when created here, but its only a global within the subprocess
-# - This function name is a misnomer. It is IMPOSSIBLE to read a variable in a subprocess and have it exist in the parent process
-read_variable_into_current_shell() {
-    # This output only appears in current shell because child process inherited stdout
-    read my_var && printf '%s\n' "$my_var" 
+read_into_array() {
+    read -a my_array
 }
 
-# Note how stdin can be redirected
-read_stdin_into_variable() {
-    read my_var # Waiting on stdin input until a delimiter (which default to newline) is read
-    printf '%s\n' "My var was: ${my_var}"
+# The custom read-terminating-delimiter can only be a single character
+custom_end_delimiter() {
+    read -d '@' my_var
 }
 
-printf '%s\n' 'nice variable!' | { read_variable_into_current_shell ;} && printf '%s\n' "$my_var"
-printf '%s\n' 'nice variable!' | { read_variable_into_current_shell && printf '%s\n' "$my_var" ;}
+read_from_file_descriptor() {
+    exec 9< read.sh
+    # Note that the last line isn't read because read encountered EOF.
+    # - This can be fixed by adding an \n at the end of the file
+    while read -u 9 cool_var; do
+        printf '%s\n' "$cool_var"
+    done
+}
 
-# stdin of read_stdin_into_varible() (which executes in a subshell) was changed to be the stdout of printf. Technically, it was the stdin of the
-# subshell that was changed, and the function executed within that subshell
-#printf '%s\n' $'what\'s up' | read_stdin_into_variable && printf '%s\n' "My var was: ${my_var}"
-
-
-#read_stdin_into_variable
-#read_stdin_into_variable 0< 'alias.sh'
+#read_into_array; printf 'The array is: %s\n' "${my_array[*]}"; printf 'Second element: %s\n' "${my_array[1]}"
+#custom_end_delimiter; printf 'my_var: %s\n' "my_var was: $my_var"
+read_from_file_descriptor

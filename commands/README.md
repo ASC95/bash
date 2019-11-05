@@ -1,5 +1,10 @@
 - https://unix.stackexchange.com/questions/11454/what-is-the-difference-between-a-builtin-command-and-one-that-is-not
 
+# Examining commands
+- There are two commands to try when I want to examine a command:
+    - $ `man <command>`
+    - $ `help <command>`
+
 # Commands
 - There are 3 types of commands: built-ins, 
 - /usr/bin contains built-ins and files

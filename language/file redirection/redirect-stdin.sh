@@ -1,8 +1,12 @@
+#!/usr/bin/env bash
+
 # http://mywiki.wooledge.org/BashGuide/InputAndOutput
 
-cd $(dirname "${BASH_SOURCE[0]}")
+# See exec.sh for more cool stuff
 
-# Cat expects the name of a file. When cat gets the name of the file, it opens a new FD to the file and reads the contents through the FD.
+cd "$(dirname "${BASH_SOURCE[0]}")"
+
+# cat expects the name of a file. When cat gets the name of the file, it opens a new FD to the file and reads the contents through the FD.
 open_new_fd() {
     cat 'get-absolute-script-dir.sh'
 }

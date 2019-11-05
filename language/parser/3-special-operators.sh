@@ -1,1 +1,0 @@
-# https://unix.stackexchange.com/questions/17107/process-substitution-and-pipe

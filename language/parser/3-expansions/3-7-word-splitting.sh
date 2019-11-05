@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # When the shell is executing a script, it knows that there are different entities in the script. There are control structures (e.g. if-statements),
 # strings, numbers, function declarations, variable initializations, etc. It will interpret some tokens as built-in Bash commands. When Bash

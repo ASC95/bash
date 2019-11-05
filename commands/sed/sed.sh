@@ -1,62 +1,46 @@
-# https://askubuntu.com/questions/20414/find-and-replace-text-within-a-file-using-commands - sed in-place substitution
-# https://www.mkyong.com/mac/sed-command-hits-undefined-label-error-on-mac-os-x/ - sed on macOS
-# https://stackoverflow.com/questions/4247068/sed-command-with-i-option-failing-on-mac-but-works-on-linux - sed on macOS
-# https://www.cyberciti.biz/faq/unix-linux-sed-print-only-matching-lines-command/ - print matching lines with sed
+#!/usr/bin/env bash
 
-# https://www.computerhope.com/unix/used.htm - sed commands
+# https://www.computerhope.com/unix/used.htm
+# https://stackoverflow.com/questions/29760638/remove-white-space-in-bash-using-sed
 
-# sed is NOT meant to replace grep! Don't use sed to do grep's job. sed's entire functionality is built on editing its input according to some rules
-# and spitting out output. grep does not edit output. It only outputs lines that match some pattern.
+cd "$( dirname "${BASH_SOURCE[0]}" )"
 
-# These are bad notes below here...
+# Syntax
+# - sed [-Ealn] <command> [file ...]
+# - sed [-Ealn] [-e <command>] [-f command_file] [-i extension] [file ...]
+#   - <command>: [address[,address]]<function>[arguments]
 
+# sed command-line flags
+# -E: use ERE
+# -e: append additional commands
+# -n: disable the default behavior of echo-ing each processed line to stdout
+#   - if the $ p $ function is used without the -n flag, each line gets output twice!
 
-# Basic syntax (see man page)
-# sed [-Ealn] command [file ...]
-#
-# sed commands
-# The form of a sed command is as follows: [address[,address]]function[arguments]
-# - addresses are optional
-#
-# Common sed functions
-# - i
-#
-# Examples:
-# 
-#
+# sed functions
+# - p: print the processed input to stdout
+# -s/rgx1/rgx2/[flags]: replace instances of rgx1 with rgx2
 
-# sed has many commands that tell sed what to do when it does/doesn't find a match in the input
-# -
+# sed regex flags
+# - g: global flag
 
-# The 'i\' command writes the text to stdout
-just_print_the_line() {
-    str1='This is a WARNING'
-    str2='This is OK'
-    printf '%s' $str1 | sed 'i\'
-    printf '%s' $str2 | sed 'i\'
+# This seems like the easiest way to just add things to the output
+format_output() {
+    sed -E 's/^/~~/; s/$/@@/' 'testfile.txt'
 }
 
-# - "-i": save the changes back to the original file
-# - s: the substitute command
-# - Long story short, on macOS I must create a backup file by specifying an extension to go with the -i flag. I can delete the file afterwards
-replace_line() {
-    sed -i .sedbkp 's/^I am line 1$/WHOOO!!!/' testfile.txt && rm *.sedbkp
+trim_leading_whitespace() {
+    sed -E 's/^[[:space:]]*//' 'testfile.txt'
 }
 
-
-
-# sed reads from stdin or a file, not command-line arguments
-detect_substring() {
-    str1='This is a WARNING'
-    str2='This is OK'
-    sed -n '/OK/p' <(printf '%s' $str1)
-    sed -n '/OK/p' <(printf '%s' $str2)
-    #sed -n '/OK/p' <(printf '%s' $str1)
-    #sed -n '/OK/p' <(printf '%s' $str2)
-    #sed 'i\'  <(printf '%s' $str2)
-    #printf '%s\n' $(sed)
+# - Recall that the purpose of xargs is to transform stdout into string arguments
+#   - I can't ignore spaces with xargs. ARGH!!! I have to output my lines from sed with quotes to protect against this
+# - I can chain multiple commands together separated by semicolons
+trim_leading_whitespace_and_remove_quote() {
+    sed -E 's/^[[:space:]]*//; s/"//; s/^/"/; s/$/"/' 'testfile.txt'
+    printf '%s\n'
+    sed -E 's/^[[:space:]]*//; s/"//; s/^/"/; s/$/"/' 'testfile.txt' | xargs printf '%s!\n'
 }
 
-#just_print_the_line
-#replace_line
-detect_substring
+#format_output
+#trim_leading_whitespace
+trim_leading_whitespace_and_remove_quote

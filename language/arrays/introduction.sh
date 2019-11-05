@@ -15,25 +15,13 @@
 # the "${ary[@]}" syntax
 at_vs_star() {
     ary=("Hello there" 'hi and goodbye' 'hey there')
-    # Hello there hi and goodbye hey there!
-    printf '%s!\n' "${ary[*]}" 
+    printf '%s!\n' "${ary[*]}" # Hello there hi and goodbye hey there!
     echo
-    # Hello there!
-    # hi and goodbye!
-    # hey there!
-    printf '%s!\n' "${ary[@]}"
+    printf '%s!\n' "${ary[@]}" # Hello there!\nhi and goodbye!\nhey there!
     echo
-    #Hello!
-    #there!
-    #hi!
-    #and!
-    #goodbye!
-    #hey!
-    #there!
-    printf '%s!\n' ${ary[*]}
+    printf '%s!\n' ${ary[*]} # Hello!\nthere!\nhi!\nand!\ngoodbye!\nhey!\nthere!
     echo
-    # Same as above...
-    printf '%s!\n' ${ary[@]}
+    printf '%s!\n' ${ary[@]} # Same as above
 }
 
 # Use the =(..) syntax to create an array with elements 
@@ -67,7 +55,7 @@ add_to_array() {
 
 # Deleting elements is tricky!
 
-#at_vs_star
+at_vs_star
 #create_array_simple
 #create_spare_array
-add_to_array
+#add_to_array

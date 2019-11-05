@@ -38,8 +38,22 @@ multiple_search() {
     grep -rni --exclude-dir "venv*" --include "__neoMetaModel__.py" -e "open[\s]*\(.*\)" -e "truncate" /Users/austinchang/pycharm/omf/omf/models
 }
 
+# -o will print only the matching part of a line
+# - I can't get rid of whitespace before object names because POSIX ERE doesn't support lookarounds. My only option is to pipe through sed
+only_matching_string() {
+    egrep -o '^.*{' '/Users/austinchang/pycharm/omf/omf/static/testFiles/IEEE-13.glm' | sed -E 's/^[[:space:]]+//' | uni
+    egrep -o '^.*{' '/Users/austinchang/pycharm/omf/omf/data/Model/admin/Automated Testing of gridlabMulti/Simple Market System/main.2019-11-01-16-01-35.glm' | sed -E 's/^[[:space:]]+//'
+}
+
+# /Users/austinchang/pycharm/omf/omf/data/Model/admin/Automated Testing of gridlabMulti/Simple Market System/main.2019-11-01-16-01-35.glm
+# /Users/austinchang/pycharm/omf/omf/static/testFiles/IEEE-13.glm
+#glm_comparison() {
+#    
+#}
+
 #freestyle
 #recursive_search
 #exclude_directories
 #include_files
-multiple_search
+#multiple_search
+only_matching_string
