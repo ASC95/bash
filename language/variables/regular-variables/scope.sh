@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # https://linuxize.com/post/bash-functions/ - variables default to global scope
 # https://stackoverflow.com/questions/124167/bash-variable-scope
 
@@ -16,7 +18,7 @@ value=$((value / 2))
 create_num
 # This is 6 because 0 / 2 + 6 = 6
 printf '%s\n' $value # 6
-# This is 12 becuae (0 + 2) * 2 + 8 = 12
+# This is 12 because (0 + 2) * 2 + 8 = 12
 printf '%s\n' $other_value # 12
 # This is 0 because 6 * 0 = 0
 value=$((value * local_var)) # local_var isn't defined, so it evaluates to 0 in a math context

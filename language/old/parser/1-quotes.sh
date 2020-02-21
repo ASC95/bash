@@ -29,6 +29,17 @@ interpolation() {
     echo "PID of last background process was $!" # PID of last background process was 4106
 }
 
+# $'<whatever>\n' is the syntax that allows newlines inside of variables
+# - To be clear the syntax is $ followed by single quotations
+include_newline_in_variable() {
+    #name=$"Austin\n" # Not what I want
+    #name="Austin\n" # Not what I want
+    #name='Austin\n' # Not what I want
+    name=$'Austin\n'
+    printf '%slikes cars' "$name"
+}
+
 #include_single_quote
 #no_interpolation
-interpolation
+#interpolation
+include_newline_in_variable

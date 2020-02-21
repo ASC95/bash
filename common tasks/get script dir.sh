@@ -26,7 +26,7 @@ view_script_dir() {
 # - Remember that the output of dirname could be almost anything, even "."
 view_absolute_dir() {
     printf '%s\n' "$( dirname "${BASH_SOURCE[0]}" )" # ".", "common tasks", etc.
-    cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd
+    cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd # /Users/austinchang/tutorials/bash/common tasks
 }
 
 # Order of processing:
@@ -47,5 +47,5 @@ view_absolute_dir_fancy() {
 
 #view_script_name
 #view_script_dir
-#view_absolute_dir
-view_absolute_dir_fancy
+view_absolute_dir
+#view_absolute_dir_fancy

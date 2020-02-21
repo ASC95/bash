@@ -14,4 +14,27 @@ one_line_output() {
     ls -1
 }
 
-one_line_output
+list_directory_permissions() {
+    ls -ld '/Users/austinchang/pycharm/omf/omf'
+}
+
+list_only_directories_in_current_directory() {
+    ls -l | grep '^d'
+}
+
+list_only_directories_of_filenames(){
+    cat '/Users/austinchang/pycharm/omf/files.txt' | xargs ls -l
+    #cat '/Users/austinchang/pycharm/omf/files.txt' | xargs ls -l | grep '^d'
+}
+
+list_files_in_directory() {
+    # Show all files
+    #ls "/Users/austinchang/pycharm/omf/omf/models"
+    # Show only *.py files
+    cd "/Users/austinchang/pycharm/omf/omf/models" && ls *.py
+}
+
+#one_line_output
+#list_directory_permissions
+#list_only_directories_of_filenames
+list_files_in_directory

@@ -45,15 +45,23 @@ only_matching_string() {
     egrep -o '^.*{' '/Users/austinchang/pycharm/omf/omf/data/Model/admin/Automated Testing of gridlabMulti/Simple Market System/main.2019-11-01-16-01-35.glm' | sed -E 's/^[[:space:]]+//'
 }
 
-# /Users/austinchang/pycharm/omf/omf/data/Model/admin/Automated Testing of gridlabMulti/Simple Market System/main.2019-11-01-16-01-35.glm
-# /Users/austinchang/pycharm/omf/omf/static/testFiles/IEEE-13.glm
-#glm_comparison() {
-#    
-#}
+# - Just use the -L flag
+files_without_keyword() {
+    # View filenames
+    #grep -rLi 'latitude' '/Users/austinchang/pycharm/omf/omf/static/publicFeeders' | sed -E 's/\/.*\///' | sort
+    # View file sizes
+    grep -rLi 'latitude' '/Users/austinchang/pycharm/omf/omf/static/publicFeeders' | sed -E 's/^/"/; s/$/"/;' | xargs ls -l
+}
 
-#freestyle
+# Use the -v flag to invert ALL of the specified patterns
+inverted_search() {
+    grep -v "delicious" 'test.txt'
+}
+
 #recursive_search
 #exclude_directories
 #include_files
 #multiple_search
-only_matching_string
+#only_matching_string
+#files_without_keyword
+inverted_search

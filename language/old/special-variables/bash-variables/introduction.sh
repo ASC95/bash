@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html
+
 script_elasped_time() {
     sleep 1 # Sleep for 1 second
     printf '%s\n' "Elpased time since script start: $SECONDS" # 1

@@ -1,0 +1,4 @@
+Apples are not delicious
+Oranges are delicious
+Bananas are delicious
+Pineapples are okay

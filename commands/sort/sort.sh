@@ -21,7 +21,10 @@ sort_by_numeric_key() {
 # Use the -u option to suppress all keys that are identical to a key that has already been found
 # - Order matters
 sort_unique() {
-    sort -t ':' -k 2 -n test.txt
+    # Only outputs zigbag:1 one time
+    sort -t ':' -k 2 -nu test.txt 
+    # Outputs zigbag:1 twice
+    #sort -t ':' -k 2 -n test.txt 
 }
 
 #sort_by_entire_line

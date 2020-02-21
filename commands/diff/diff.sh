@@ -1,4 +1,5 @@
 # https://unix.stackexchange.com/questions/81998/understanding-of-diff-output
+# https://stackoverflow.com/questions/8074998/how-to-control-the-number-of-lines-that-surround-each-difference-when-running-g
 
 cd "$( dirname "${BASH_SOURCE[0]}" )"
 
@@ -60,5 +61,19 @@ compare_strings() {
     diff <(echo -e 'hi \nbye') <(echo -e 'hello \nbye\nsigh')
 }
 
+# Use the -y option to output both files in two columns. Very detailed but often is too much information
+extremely_detailed_view() {
+    diff -y file1.txt file2.txt
+}
+
+adjust_output_window() {
+    ## Don't add any extra lines, but give more detailed output
+    #diff -U 0 /Users/austinchang/pycharm/omf/omf/scratch/GRIP/helper/olin-barre-dirty.omd /Users/austinchang/pycharm/omf/omf/scratch/GRIP/helper/olin-barre-clean.omd
+    ## Add two extra lines of context before AND after a diff section
+    diff -U 10 /Users/austinchang/pycharm/omf/omf/scratch/GRIP/helper/olin-barre-dirty.omd /Users/austinchang/pycharm/omf/omf/scratch/GRIP/helper/olin-barre-clean.omd
+}
+
 #compare_files
-compare_strings
+#compare_strings
+#extremely_detailed_view
+adjust_output_window

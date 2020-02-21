@@ -1,0 +1,1 @@
+- These notes are for POSIX grep, which IMO is much less useful than GNU grep. GNU grep must be installed via Homebrew for macOS 

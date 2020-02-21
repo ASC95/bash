@@ -1,0 +1,35 @@
+<list>.sort() yes
+ <list>.sort() yes
+<list> .sort () yes
+ <list> .sort () yes
+Xsort() no
+ Xsort() no
+open() yes
+ open () yes
+  open    ( yes
+file() yes
+ file() yes
+ file   ( yes
+isfile no
+    isfile no
+is file yes
+sorted   () yes
+ sorted   () yes
+has_key() yes
+ has_key() yes
+has_key   () yes
+urllib yes
+ urllib yes
+urlparse yes
+ urlparse yes
+.csv yes
+ .csv yes
+urllib2 yes
+ urllib2 yes
+from   csv   import yes
+import  csv yes
+locked_open() yes
+ locked_open() yes
+range() yes
+ range() yes
+file yes
