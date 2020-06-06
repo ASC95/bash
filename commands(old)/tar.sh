@@ -2,14 +2,7 @@
 # https://www.pendrivelinux.com/how-to-open-a-tar-file-in-unix-or-linux/ - tar basics
 # https://stackoverflow.com/questions/10540935/what-is-the-difference-between-tar-and-zip - tar vs zip
 
-# A tar file stores multiple files in a single file, but provides no compression
-# - Extension: *.tar
-# A "tarball" is a tar file that has been compressed with gzip. 
-# - Extensions: *.tgz or *.tar.gz
-# zip is like tar + compression, but it is not the same thing
-# - zip: a randomly accessible list of individuall compressed files that provides no compression across files
-# - .tgz: a compressed catalog, where the catalog contains files that have been collectively compressed. The entire archive must be decompressed for
-#   file access
+
 
 # The $ tar $ utility can create, add/replace, list, update, or extract
 # - The operation must be defined by the first flag

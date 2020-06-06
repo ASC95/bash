@@ -47,7 +47,7 @@ trim_filepath() {
     printf '%s' "$fp" | sed -E 's/\/.*\///'
 }
 
-#format_output
+format_output
 #trim_leading_whitespace
 #trim_leading_whitespace_and_quotes_and_trailing_whitespace
-trim_filepath
+#trim_filepath
