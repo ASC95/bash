@@ -1,0 +1,64 @@
+4738-06-14-2020 22:21:06.320 -0400 INFO  ExecProcessor - New scheduled exec process: /opt/splunk/bin/python2.7 /opt/splunk/etc/apps/splunk_monitoring_console/bin/dmc_config.py
+4739-06-14-2020 22:21:06.320 -0400 INFO  ExecProcessor - 	interval: run once
+4740:06-14-2020 22:21:06.320 -0400 INFO  ExecProcessor - New scheduled exec process: /opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh
+4741-06-14-2020 22:21:06.320 -0400 INFO  ExecProcessor - 	interval: run once
+4742-06-14-2020 22:21:06.343 -0400 INFO  PipelineComponent - Pipeline structuredparsing disabled in default-mode.conf file
+--
+4810-06-14-2020 22:21:10.361 -0400 INFO  IntrospectionGenerator:resource_usage -   RU_main - I-data gathering (Resource Usage) starting; period=10s
+4811-06-14-2020 22:21:10.381 -0400 INFO  IntrospectionGenerator:resource_usage -   RU_main - I-data gathering (IO Statistics) starting; interval=60s
+4812:06-14-2020 22:21:16.722 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" Untopchan - python script version: 3.8.3 (default, Jun 14 2020, 17:09:37) 
+4813:06-14-2020 22:21:16.722 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" [GCC 9.3.0]
+4814:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" Traceback (most recent call last):
+4815:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"   File "/home/austin/programming/repositories/untopchan/data_gen_hist_matpower.py", line 11, in <module>
+4816:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"     from oct2py import octave
+4817:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"   File "/home/austin/programming/git-managed-tools/pyenv/versions/aifbdp-3.8.3/lib/python3.8/site-packages/oct2py/__init__.py", line 38, in <module>
+4818:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"     octave = Oct2Py()
+4819:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"   File "/home/austin/programming/git-managed-tools/pyenv/versions/aifbdp-3.8.3/lib/python3.8/site-packages/oct2py/core.py", line 76, in __init__
+4820:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"     self.restart()
+4821:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"   File "/home/austin/programming/git-managed-tools/pyenv/versions/aifbdp-3.8.3/lib/python3.8/site-packages/oct2py/core.py", line 517, in restart
+4822:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"     self._engine = OctaveEngine(stdin_handler=self._handle_stdin,
+4823:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"   File "/home/austin/programming/git-managed-tools/pyenv/versions/aifbdp-3.8.3/lib/python3.8/site-packages/octave_kernel/kernel.py", line 173, in __init__
+4824:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"     self.repl = self._create_repl()
+4825:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"   File "/home/austin/programming/git-managed-tools/pyenv/versions/aifbdp-3.8.3/lib/python3.8/site-packages/octave_kernel/kernel.py", line 390, in _create_repl
+4826:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"     repl = REPLWrapper(cmd, orig_prompt, change_prompt,
+4827:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"   File "/home/austin/programming/git-managed-tools/pyenv/versions/aifbdp-3.8.3/lib/python3.8/site-packages/metakernel/replwrap.py", line 95, in __init__
+4828:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"     self.set_prompt(prompt_regex,
+4829:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"   File "/home/austin/programming/git-managed-tools/pyenv/versions/aifbdp-3.8.3/lib/python3.8/site-packages/metakernel/replwrap.py", line 119, in set_prompt
+4830:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"     self.child.expect(prompt_regex)
+4831:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"   File "/home/austin/programming/git-managed-tools/pyenv/versions/aifbdp-3.8.3/lib/python3.8/site-packages/pexpect/spawnbase.py", line 343, in expect
+4832:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"     return self.expect_list(compiled_pattern_list,
+4833:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"   File "/home/austin/programming/git-managed-tools/pyenv/versions/aifbdp-3.8.3/lib/python3.8/site-packages/pexpect/spawnbase.py", line 372, in expect_list
+4834:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"     return exp.expect_loop(timeout)
+4835:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"   File "/home/austin/programming/git-managed-tools/pyenv/versions/aifbdp-3.8.3/lib/python3.8/site-packages/pexpect/expect.py", line 179, in expect_loop
+4836:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"     return self.eof(e)
+4837:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"   File "/home/austin/programming/git-managed-tools/pyenv/versions/aifbdp-3.8.3/lib/python3.8/site-packages/pexpect/expect.py", line 122, in eof
+4838:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"     raise exc
+4839:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" pexpect.exceptions.EOF: End Of File (EOF). Exception style platform.
+4840:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" <pexpect.pty_spawn.spawn object at 0x7fb51221f3a0>
+4841:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" command: /usr/bin/octave-cli
+4842:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" args: [b'/usr/bin/octave-cli', b'--interactive', b'--quiet', b'--no-init-file']
+4843:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" buffer (last 100 chars): ''
+4844:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" before (last 100 chars): 'ror: /lib/libGraphicsMagick-Q16.so.3: undefined symbol: xmlNanoHTTPCleanup, version LIBXML2_2.4.30\r\n'
+4845:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" after: <class 'pexpect.exceptions.EOF'>
+4846:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" match: None
+4847:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" match_index: None
+4848:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" exitstatus: None
+4849:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" flag_eof: True
+4850:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" pid: 47459
+4851:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" child_fd: 6
+4852:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" closed: False
+4853:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" timeout: 30
+4854:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" delimiter: <class 'pexpect.exceptions.EOF'>
+4855:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" logfile: None
+4856:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" logfile_read: None
+4857:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" logfile_send: None
+4858:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" maxread: 2000
+4859:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" ignorecase: False
+4860:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" searchwindowsize: None
+4861:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" delaybeforesend: 0.05
+4862:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" delayafterclose: 0.1
+4863:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" delayafterterminate: 0.1
+4864:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh" searcher: searcher_re:
+4865:06-14-2020 22:21:16.723 -0400 ERROR ExecProcessor - message from "/opt/splunk/etc/apps/untopchan/bin/run_untopchan.sh"     0: re.compile('octave.*>')
+4866-06-14-2020 22:21:36.309 -0400 INFO  ScheduledViewsReaper - Scheduled views reaper run complete. Reaped count=0 scheduled views
+4867-06-14-2020 22:21:36.310 -0400 INFO  CascadingReplicationManager - Using value for property max_replication_threads=4.
