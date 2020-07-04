@@ -25,5 +25,13 @@ search_for_package_versions() {
     aptitude versions "?exact-name(octave)" # This uses the ?exact-name long-form directive to match only packages named exactly "octave"
 }
 
+# - Aptitude refers to this by searching by a package's "origin", though it doesn't say exactly what a package's origin is!
+# - Aptitude will only find packages if the origin is an added repository!
+list_packages_by_repo() {
+    #aptitude search ~Onilarimogard
+    aptitude search "?origin (nilarimogard)"
+}
+
 #search_for_package_with_string
-search_for_package_versions
+#search_for_package_versions
+list_packages_by_repo

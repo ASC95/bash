@@ -14,6 +14,7 @@ view_files_installed_by_a_package() {
 #   - I wonder why it won't display information about "splunk". The only reason I can think of is that splunk didn't come from a repository
 #       - This is also true for "teams"
 #       - Note that dpkg -s [splunk|teams] works fine
+# - If this isn't working use $ apt show <package> $ instead, which is really $ apt-cache show <package> $ under the hood
 view_metadata_about_package() {
     #dpkg -p apt
     #dpkg -p vim-common

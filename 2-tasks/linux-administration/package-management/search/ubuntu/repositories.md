@@ -1,4 +1,0 @@
-- Main - Canonical-supported free and open-source software.
-- Universe - Community-maintained free and open-source software.
-- Restricted - Proprietary drivers for devices.
-- Multiverse - Software restricted by copyright or legal issues. 

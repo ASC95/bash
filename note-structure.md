@@ -26,3 +26,6 @@
 - I frequently have questions from both perspectives
 
 New rule: write "\<topic>-introduction.md" instead of just "introduction.md"
+
+- The 2-tasks/ notes doesn't necessary have to follow the task name -> tool name filename hierarchy, although that is a valid option. They could also
+  follow the task name -> OS name filename hierarchy. It really depends on the task
