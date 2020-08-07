@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cd "$(dirname "${BASH_SOURCE[0]}")"
+
 # - https://unix.stackexchange.com/questions/420961/how-to-identify-gpg-key-ids-so-they-may-be-deleted
 
 # - Each complete output listing from this command is formatted in this way:
@@ -26,10 +28,19 @@ add_key_from_stdin() {
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 }
 
+# - Note how the public key file ends with a newline! I'm just going to assume that they all should
+# - This command adds the key directly to /etc/apt/trusted.gpg
+add_key_from_file() {
+    sudo apt-key add 'oracle_vbox_2016.txt'
+}
+
 # - I need the key ID of the public key that I want to remove (see gpg notes)
 remove_key() {
     sudo apt-key del 4C9D234C
 }
 
 #show_all_keys
-show_matching_keys
+#show_matching_keys
+#add_key_from_stdin
+add_key_from_file
+#remove_key

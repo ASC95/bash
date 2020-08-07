@@ -4,8 +4,6 @@
 # https://www.pendrivelinux.com/how-to-open-a-tar-file-in-unix-or-linux/ - tar basics
 # https://stackoverflow.com/questions/10540935/what-is-the-difference-between-tar-and-zip - tar vs zip
 
-
-
 # The $ tar $ utility can create, add/replace, list, update, or extract
 # - The operation must be defined by the first flag
 # - Control verbose with -v

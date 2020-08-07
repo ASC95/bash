@@ -18,6 +18,8 @@
 search_for_package_with_string() {
     #aptitude search ~npython
     aptitude search ~noctave
+    # This is the same command as above, but it limits the search to installed packages
+    #aptitude search ~i~noctave
 }
 
 search_for_package_versions() {
@@ -27,6 +29,8 @@ search_for_package_versions() {
 
 # - Aptitude refers to this by searching by a package's "origin", though it doesn't say exactly what a package's origin is!
 # - Aptitude will only find packages if the origin is an added repository!
+# - The "origin" appears to refer to the name of a *.list
+#   - E.g. the origin of the file /etc/apt/sources.list.d/teams.list is "teams" so I can search the string "teams" with aptitude
 list_packages_by_repo() {
     #aptitude search ~Onilarimogard
     aptitude search "?origin (nilarimogard)"

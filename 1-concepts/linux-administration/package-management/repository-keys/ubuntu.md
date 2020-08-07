@@ -56,6 +56,8 @@ Description-md5: 8aeed0a03c7cd494f0c4b8d977483d7e
 - Public key cryptography can do two things:
   - A public key can encrypt a message so that only the possessor of the private key can decrypt and understand it
   - A private key can sign a message so that anyone with the public key can verify that it was sent by the possessor of the private key
+- Remember that the distinction between the private vs. public key of a key pair is arbitrary. Either key can be used for either purpose, but once a
+  key's purpose has been selected it should not be changed or I'll have ruined the whole point of using a key pair
 # Secure apt
 - Debian implements public key cryptography through a workflow called "secure apt"
 - "Secure apt" is merely a term that encompasses 1) using the `apt-key` command on the client to manage a keyring of gpg keys 2) securely storing and
