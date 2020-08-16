@@ -1,0 +1,1 @@
+echo bar is: ${bar}
