@@ -37,6 +37,3 @@ check_if_string_is_not_null() {
 
 #check_if_string_is_null
 check_if_string_is_not_null
-
-
-Figure out TODO, learn about new test, continue learning about old test, then circle back around to numeric and string equality

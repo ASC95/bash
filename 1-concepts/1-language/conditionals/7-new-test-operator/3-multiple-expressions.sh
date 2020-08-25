@@ -7,8 +7,8 @@
 #     1-language/conditionals/2-and-operator.sh)
 #   - Thus, the [ and [[ operators have incompatibly different ways of combining two expressions
 logical_and_two_expressions() {
-    if [[ 'first' = 'first' -a 'second' = 'second' ]]; then
-    #if [[ 'first' = 'first' && 'second' = 'second' ]]; then
+    #if [[ 'first' = 'first' -a 'second' = 'second' ]]; then
+    if [[ 'first' = 'first' && 'second' = 'second' ]]; then
         echo 'Everything was true'
     else
         echo 'Something was false'

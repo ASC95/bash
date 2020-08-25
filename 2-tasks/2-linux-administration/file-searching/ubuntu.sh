@@ -9,4 +9,19 @@ find_file_by_modified_time_range() {
     find . -newermt "2020-07-04 00:00:00" -not -newermt "2020-07-04 03:00:00" -not -path '*.git*'
 }
 
-find_file_by_modified_time_range
+enumerate_files() {
+    printf '%s\n' 'See bash/3-tools/linux-executables/redirection/xargs.sh'
+}
+
+grep_odt_files() {
+    printf '%s\n' 'See bash/3-tools/scripts/grep-odt-files/grep-odt-files.sh'
+}
+
+compare_file_identifies() {
+    printf '%s\n' 'See bash/3-tools/linux-executables/file-search/find.sh'
+}
+
+#find_file_by_modified_time_range
+#enumerate_files
+#grep_odt_files
+compare_file_identifies

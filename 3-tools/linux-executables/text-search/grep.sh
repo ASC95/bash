@@ -10,4 +10,9 @@ adjust_output_window() {
     grep -C 1 "Oranges" test.txt
 }
 
+grep_odt_files() {
+    printf '%s\n' '/home/austin/programming/tutorials/bash/3-tools/scripts/grep-odt-files/grep-odt-files.sh'
+}
+
 adjust_output_window
+#grep_odt_files
