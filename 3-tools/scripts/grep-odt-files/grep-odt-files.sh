@@ -24,4 +24,5 @@ grep_odt_files_one_liner() {
     find . -iname "*.odt" -print0 | xargs -0 -n 1 odt2txt | grep -i "<pattern>"
 }
 
-grep_odt_files '/media/austin/3C4AC9214AC8D932/Users/Austin/Sync/programming/old/docker' 'override'
+#grep_odt_files '/media/austin/3C4AC9214AC8D932/Users/Austin/Sync/programming/old/docker' 'override'
+grep_odt_files '/media/austin/3C4AC9214AC8D932/Users/Austin/Sync/nreca/' 'todo'

@@ -2,6 +2,10 @@
   tbh)
 - https://wiki.debian.org/SecureApt - describes secure apt in detail
 - https://wiki.debian.org/DebianRepository/Format - gory details of Debian archive formatting, including formatting shown in `/etc/apt/sources.list`
+- https://askubuntu.com/questions/677471/how-do-you-create-a-signed-deb-package - packages on Debian/Ubuntu do _not_ have their _signatures_ verified
+  by clients by default because it's difficult to set up. Therefore, all trust in the secure apt system is in the authentication of signature of the
+  "Release" file alone. Only the hashes of the individual packages are checked to make sure they didn't get messed up during download
+- See `signing-deb-packages.html` for gorty details about signing .deb packages themselves
 # Examples
 ## Client-side
 ### Show stored gpg keys
@@ -57,7 +61,7 @@ Description-md5: 8aeed0a03c7cd494f0c4b8d977483d7e
   - A public key can encrypt a message so that only the possessor of the private key can decrypt and understand it
   - A private key can sign a message so that anyone with the public key can verify that it was sent by the possessor of the private key
 - Remember that the distinction between the private vs. public key of a key pair is arbitrary. Either key can be used for either purpose, but once a
-  key's purpose has been selected it should not be changed or I'll have ruined the whole point of using a key pair
+  key's purpose has been selected it should not be changed or its ruins the whole point of using a key pair
 # Secure apt
 - Debian implements public key cryptography through a workflow called "secure apt"
 - "Secure apt" is merely a term that encompasses 1) using the `apt-key` command on the client to manage a keyring of gpg keys 2) securely storing and
@@ -72,9 +76,11 @@ Description-md5: 8aeed0a03c7cd494f0c4b8d977483d7e
     - In particular, I care about the "Packages", "Packages.gz", and "Packages.xz" files and their associated hashes, although there are other files
 - Each "Packages" file (there are many!) contains metadata for each individual package that is available for the associated distribution +
   microarchitecture 
-- apt verifies the "Packages" file by ensuring that its calculated has matches the hash declared in the "Release" file
-- Once apt verifies the "Packages" file, it then verifies each individual downloaded package by ensuring its calculated hash matches the hash declared
-  in the "Packages" file 
+- apt verifies the _integrity_ of each "Packages" file by ensuring that its calculated has matches the hash declared in the "Release" file
+- Once apt verifies the "Packages" file, it then verifies the integrity each individual downloaded package by ensuring its calculated hash matches the
+  hash declared in the "Packages" file 
+- By default, individual .deb packages are _not_ authenticated by default (see sources)!
+  - Only reporsitory metadata is cryptographically signed!
 #### Verifying the "Release" file
 - The above system works great if the Release file is known to be valid, but how can I know for sure?
 - apt ensures the "Release" file is valid by checking the signature of the "Release" file by checking "Release.gpg", which signs the "Release" file
