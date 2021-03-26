@@ -1,0 +1,1 @@
+# - See bash/1-concepts/1-language/process-execution/signal-trapping.sh

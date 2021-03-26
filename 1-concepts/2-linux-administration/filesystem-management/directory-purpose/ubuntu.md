@@ -6,7 +6,7 @@
 - /opt: stores additional software packages that are NOT managed by the package manager
 - /proc: contains a virtual filesystem that provides a mechanism for the kernel to send information to processes (interesting!)
 - /tmp: provides temporary storage for all applications
-- /usr: contains USER utilties and applications
+- /usr: contains USER-installed utilties and applications
     - This is different from /bin
 - /var: similar in purpose to /tmp, except that the contents of /var persist between boots
     - /var/log contains system log files which are very useful

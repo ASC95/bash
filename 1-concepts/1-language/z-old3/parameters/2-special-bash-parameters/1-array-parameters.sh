@@ -1,0 +1,2 @@
+# - There are no array-related Bash special parameters. There are only special parameters that expand the positional arguments into words
+#   - See bash/1-concepts/1-language/parameters/1-positional-parameters.sh

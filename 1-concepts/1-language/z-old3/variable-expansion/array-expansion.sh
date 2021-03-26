@@ -1,0 +1,1 @@
+# - See bash/1-concepts/1-language/variable-types/arrays/1-create-numeric-array.sh

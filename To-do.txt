@@ -1,4 +1,0 @@
-- 6/14/20
-  - Learn about systemd
-  - What kinds of processes should/shouldn't be run through systemd?
-    - Should Splunk?

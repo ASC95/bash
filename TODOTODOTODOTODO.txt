@@ -1,0 +1,4 @@
+1. Revisit locale variables
+2. Figure out how to provide a locale environment variable to ls
+3. Figure out how pipes work
+4. Figure out why set -u error terminate for normal commands, but not for commands that are part of a pipeline

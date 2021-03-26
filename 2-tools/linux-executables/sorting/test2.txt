@@ -1,0 +1,138 @@
+5a4ed27 (HEAD -> nreca-version) HEAD@{0}: checkout: moving from nreca to nreca-version
+b84e862 (nreca) HEAD@{1}: checkout: moving from nreca-version to nreca
+5a4ed27 (HEAD -> nreca-version) HEAD@{2}: checkout: moving from master to nreca-version
+4ffd051 (master) HEAD@{3}: checkout: moving from nreca-version to master
+5a4ed27 (HEAD -> nreca-version) HEAD@{4}: commit (merge): Merge branch 'master' into nreca-version
+38f42c8 HEAD@{5}: checkout: moving from master to nreca-version
+4ffd051 (master) HEAD@{6}: commit: On branch master
+dc62386 HEAD@{7}: checkout: moving from nreca-version to master
+38f42c8 HEAD@{8}: checkout: moving from master to nreca-version
+dc62386 HEAD@{9}: checkout: moving from nreca-version to master
+38f42c8 HEAD@{10}: commit: On branch nreca-version
+bae71c8 HEAD@{11}: merge master: Merge made by the 'recursive' strategy.
+c526786 HEAD@{12}: checkout: moving from master to nreca-version
+dc62386 HEAD@{13}: checkout: moving from nreca-version to master
+c526786 HEAD@{14}: checkout: moving from master to nreca-version
+dc62386 HEAD@{15}: commit: added prepare-commit-msg hook
+1457f89 HEAD@{16}: checkout: moving from nreca-version to master
+c526786 HEAD@{17}: checkout: moving from nreca to nreca-version
+b84e862 (nreca) HEAD@{18}: checkout: moving from master to nreca
+1457f89 HEAD@{19}: checkout: moving from nreca to master
+b84e862 (nreca) HEAD@{20}: checkout: moving from master to nreca
+1457f89 HEAD@{21}: checkout: moving from nreca to master
+b84e862 (nreca) HEAD@{22}: checkout: moving from master to nreca
+1457f89 HEAD@{23}: reset: moving to 1457f89a44caae423a53489d49919d1fa2e9ad35
+9ff6c7c HEAD@{24}: checkout: moving from nreca to master
+b84e862 (nreca) HEAD@{25}: checkout: moving from master to nreca
+9ff6c7c HEAD@{26}: commit: tried to remove unnecessary variable
+1457f89 HEAD@{27}: reset: moving to 1457f89a44caae423a53489d49919d1fa2e9ad35
+c6fac5d HEAD@{28}: checkout: moving from nreca to master
+b84e862 (nreca) HEAD@{29}: checkout: moving from master to nreca
+c6fac5d HEAD@{30}: commit: master: removed unnecessary variable from post-checkout.sh
+1457f89 HEAD@{31}: reset: moving to 1457f89a44caae423a53489d49919d1fa2e9ad35
+dc9d24a HEAD@{32}: reset: moving to dc9d24a46b4ea2b805713e5f91fc7d015a230670
+dc9d24a HEAD@{33}: checkout: moving from nreca to master
+b84e862 (nreca) HEAD@{34}: checkout: moving from master to nreca
+dc9d24a HEAD@{35}: commit: master: removed unnecessary variable from post-checkout.sh
+1457f89 HEAD@{36}: checkout: moving from nreca to master
+b84e862 (nreca) HEAD@{37}: checkout: moving from master to nreca
+1457f89 HEAD@{38}: commit: master: tried to make post-checkout hook more modular
+2149ba9 HEAD@{39}: checkout: moving from nreca-version to master
+c526786 HEAD@{40}: checkout: moving from master to nreca-version
+2149ba9 HEAD@{41}: checkout: moving from nreca-version to master
+c526786 HEAD@{42}: commit: nreca-version: added the custom substation visualization dashboard
+2149ba9 HEAD@{43}: checkout: moving from master to nreca-version
+2149ba9 HEAD@{44}: commit: master: deleted the Splunk OT-add on
+f7552f4 HEAD@{45}: pull: Merge made by the 'recursive' strategy.
+d938aa4 HEAD@{46}: reset: moving to d938aa4
+a48ff27 HEAD@{47}: checkout: moving from nreca to master
+b84e862 (nreca) HEAD@{48}: reset: moving to b84e862
+b84e862 (nreca) HEAD@{49}: checkout: moving from 9c97b4cc28c8dff335d360e9b87c304a40266219 to nreca
+9c97b4c HEAD@{50}: checkout: moving from d938aa421bdeb4043631cd5d959fe6cf04c79180 to 9c97b4cc28c8dff335d360e9b87c304a40266219
+d938aa4 HEAD@{51}: checkout: moving from master to d938aa421bdeb4043631cd5d959fe6cf04c79180
+a48ff27 HEAD@{52}: checkout: moving from nreca to master
+b84e862 (nreca) HEAD@{53}: reset: moving to b84e862940aa2db2e73d5987fb439bf22d1058e3
+dff5334 HEAD@{54}: reset: moving to ORIG_HEAD
+b84e862 (nreca) HEAD@{55}: checkout: moving from nreca to nreca
+b84e862 (nreca) HEAD@{56}: checkout: moving from master to nreca
+a48ff27 HEAD@{57}: checkout: moving from nreca to master
+b84e862 (nreca) HEAD@{58}: checkout: moving from master to nreca
+a48ff27 HEAD@{59}: commit: master: tried to make post-checkout.sh more modular
+b84e862 (nreca) HEAD@{60}: checkout: moving from nreca to master
+b84e862 (nreca) HEAD@{61}: reset: moving to b84e862940aa2db2e73d5987fb439bf22d1058e3
+dff5334 HEAD@{62}: checkout: moving from master to nreca
+b84e862 (nreca) HEAD@{63}: reset: moving to b84e862940aa2db2e73d5987fb439bf22d1058e3
+b84e862 (nreca) HEAD@{64}: checkout: moving from nreca to master
+dff5334 HEAD@{65}: reset: moving to ORIG_HEAD
+b84e862 (nreca) HEAD@{66}: checkout: moving from master to nreca
+b84e862 (nreca) HEAD@{67}: reset: moving to b84e862940aa2db2e73d5987fb439bf22d1058e3
+dff5334 HEAD@{68}: checkout: moving from nreca to master
+b84e862 (nreca) HEAD@{69}: checkout: moving from master to nreca
+dff5334 HEAD@{70}: checkout: moving from nreca to master
+b84e862 (nreca) HEAD@{71}: reset: moving to HEAD
+b84e862 (nreca) HEAD@{72}: reset: moving to b84e862940aa2db2e73d5987fb439bf22d1058e3
+c71ea06 HEAD@{73}: checkout: moving from master to nreca
+dff5334 HEAD@{74}: commit: whatever
+156285d HEAD@{75}: commit: On branch master
+d45ef2d HEAD@{76}: commit: x
+32d66e4 HEAD@{77}: commit: On branch master
+1731796 HEAD@{78}: commit: tried modifying post-checkout hook
+b84e862 (nreca) HEAD@{79}: checkout: moving from nreca to master
+c71ea06 HEAD@{80}: checkout: moving from master to nreca
+b84e862 (nreca) HEAD@{81}: commit: deleted Splunk OT add-on
+d938aa4 HEAD@{82}: commit: cleaned up output of post-checkout hook and removed Splunk OT add-on symlinking
+9c97b4c HEAD@{83}: checkout: moving from nreca to master
+c71ea06 HEAD@{84}: checkout: moving from master to nreca
+9c97b4c HEAD@{85}: commit: updated the README.md
+e1eae44 HEAD@{86}: checkout: moving from nreca to master
+c71ea06 HEAD@{87}: commit (merge): Merge branch 'master' into nreca
+41af3d2 HEAD@{88}: checkout: moving from distributed-search-deployment to nreca
+7981be6 (distributed-search-deployment) HEAD@{89}: checkout: moving from master to distributed-search-deployment
+e1eae44 HEAD@{90}: checkout: moving from distributed-search-deployment to master
+7981be6 (distributed-search-deployment) HEAD@{91}: commit: fixed typo
+98c8157 HEAD@{92}: checkout: moving from master to distributed-search-deployment
+e1eae44 HEAD@{93}: commit: fixed typo
+03c301f HEAD@{94}: checkout: moving from distributed-search-deployment to master
+98c8157 HEAD@{95}: checkout: moving from master to distributed-search-deployment
+03c301f HEAD@{96}: checkout: moving from distributed-search-deployment to master
+98c8157 HEAD@{97}: commit: added behavior to unlink the local version of the Splunk OT security app
+b44d658 HEAD@{98}: checkout: moving from master to distributed-search-deployment
+03c301f HEAD@{99}: checkout: moving from distributed-search-deployment to master
+b44d658 HEAD@{100}: checkout: moving from master to distributed-search-deployment
+03c301f HEAD@{101}: commit: added the OT security app and the ability to symlink it
+209f6be HEAD@{102}: checkout: moving from distributed-search-deployment to master
+b44d658 HEAD@{103}: checkout: moving from nreca to distributed-search-deployment
+41af3d2 HEAD@{104}: checkout: moving from master to nreca
+209f6be HEAD@{105}: checkout: moving from distributed-search-deployment to master
+b44d658 HEAD@{106}: commit: nicer message for post-checkout.sh
+45b718a HEAD@{107}: checkout: moving from nreca to distributed-search-deployment
+41af3d2 HEAD@{108}: checkout: moving from master to nreca
+209f6be HEAD@{109}: checkout: moving from nreca to master
+41af3d2 HEAD@{110}: checkout: moving from master to nreca
+209f6be HEAD@{111}: checkout: moving from nreca to master
+41af3d2 HEAD@{112}: commit (merge): Merge branch 'master' into nreca
+fd0ca8d HEAD@{113}: checkout: moving from master to nreca
+209f6be HEAD@{114}: commit: nicer messages for post-checkout.sh
+4837f89 HEAD@{115}: checkout: moving from nreca to master
+fd0ca8d HEAD@{116}: checkout: moving from master to nreca
+4837f89 HEAD@{117}: checkout: moving from nreca to master
+fd0ca8d HEAD@{118}: commit (merge): Merge branch 'master' into nreca
+e2f6d77 HEAD@{119}: checkout: moving from master to nreca
+4837f89 HEAD@{120}: checkout: moving from distributed-search-deployment to master
+45b718a HEAD@{121}: checkout: moving from master to distributed-search-deployment
+4837f89 HEAD@{122}: checkout: moving from distributed-search-deployment to master
+45b718a HEAD@{123}: commit: updated script
+56e47ec HEAD@{124}: checkout: moving from master to distributed-search-deployment
+4837f89 HEAD@{125}: commit: updated message
+ce4ab0f HEAD@{126}: checkout: moving from distributed-search-deployment to master
+56e47ec HEAD@{127}: checkout: moving from master to distributed-search-deployment
+ce4ab0f HEAD@{128}: commit: updated with nicer message
+f9636c4 HEAD@{129}: checkout: moving from distributed-search-deployment to master
+56e47ec HEAD@{130}: commit: updated with nicer message
+e538c90 HEAD@{131}: checkout: moving from master to distributed-search-deployment
+f9636c4 HEAD@{132}: checkout: moving from distributed-search-deployment to master
+e538c90 HEAD@{133}: commit: made post-checkout.sh executable
+11f197f HEAD@{134}: checkout: moving from master to distributed-search-deployment
+f9636c4 HEAD@{135}: commit: updated post-checkout.sh with nicer message for removing files
+3fe5485 HEAD@{136}: checkout: moving from distributed-search-deployment to master
+11f197f HEAD@{137}: commit: add post-checkout.sh to distributed-search-deployment branch
