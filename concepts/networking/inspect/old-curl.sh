@@ -23,12 +23,6 @@ send_file_post_request() {
     curl -F mycoolfile=@app.py http://127.0.0.1:5000/file
 }
 
-# POST general form data to the server
-# curl -F <key>=<value> <url>
-send_form_data_post_request() {
-    curl -F foo=bar -v http://127.0.0.1:5000/get-form-value
-}
-
 # POST form data (which happens to include files), then download the result
 # $ curl -F <form file name>=@<file name> <url> -o <output file name>
 send_file_download_file() {

@@ -21,4 +21,9 @@ connect_and_authenticate_with_localhost_server() {
   curl -k -u austin:1q2w3e4r https://localhost:8089/servicesNS/nobody/utcyber/storage/collections/data/ttp_reports
 }
 
-connect_to_localhost_server
+post_form_data() {
+  curl -F foo=bar -v http://127.0.0.1:5000/view_form_data
+}
+
+#connect_to_localhost_server
+post_form_data

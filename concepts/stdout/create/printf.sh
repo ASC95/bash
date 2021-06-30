@@ -25,16 +25,9 @@ use_single_format_specifier() {
     f='nice'
     g='strings'
     # - This is generally not what I want. Using a single format specifier with multiple arguments will apply that specifer to each argument
-    printf '~%s~\n' $a $b $c $d $e $f $g
-    # ~This~
-    # ~is~
-    # ~a~
-    # ~set~
-    # ~of~
-    # ~nice~
-    # ~strings~
-    # This is how to concatenate strings into a single argument
-    printf '%s\n' "$a $b $c $d $e $f $g"
+    printf '~%s~' $a $b $c $d $e $f $g # ~This~~is~~a~~set~~of~~nice~~strings~
+    # - This is how to concatenate multiple strings into a single argument
+    printf '~%s~' "$a $b $c $d $e $f $g" # ~This is a set of nice strings~
 }
 
 # - As long as I use the correct number of format specifiers, I can pass multiple arguments to printf and get the format I expected
@@ -48,6 +41,6 @@ use_the_correct_format_specifiers() {
 }
 
 #use_no_format_specifier
-#use_single_format_specifier
+use_single_format_specifier
 #use_multiple_format_specifiers
-use_the_correct_format_specifiers
+#use_the_correct_format_specifiers
